@@ -11,6 +11,9 @@ public class Java8Demo1 {
 
         System.out.println("1. Print all nos");
         list.stream().forEach(System.out::println);
+        System.out.println("1.1 Print all nos");
+        list.forEach(n -> System.out.println(n));
+
 
         System.out.println("2. Print all even nos");
         list.stream().filter(i -> i % 2 == 0).forEach(System.out::println);
@@ -35,7 +38,7 @@ public class Java8Demo1 {
         System.out.println(a2);
 
         System.out.println("7. Make Courses uppercase");
-        courses.stream().map(i->i.toUpperCase()).forEach(System.out::println);
+        courses.stream().map(i -> i.toUpperCase()).forEach(System.out::println);
     }
 
 }
