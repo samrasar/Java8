@@ -11,9 +11,9 @@ public class Java8Demo2 {
         List<Integer> list = List.of(2, 5, 5, 8, 9, 10, 2, 5, 3);
 
         int sum = list.stream().reduce(0, (x, y) -> x + y);
-        System.out.println("Sum of all the nus :" + sum);
+        System.out.println("Sum of all the numbers :" + sum);
         int sumUsingMethRef = list.stream().reduce(0, Integer::sum);
-        System.out.println("Sum of all the nus :" + sumUsingMethRef);
+        System.out.println("Sum of all the numbers :" + sumUsingMethRef);
 
         int max = list.stream().reduce(0, (x, y) -> x > y ? x : y);
         System.out.println("Max Value :" + max);

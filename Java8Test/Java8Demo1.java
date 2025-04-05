@@ -28,7 +28,7 @@ public class Java8Demo1 {
 
         System.out.println("5. Print square of all the even nos");
         list.stream().filter(i -> i % 2 == 0)
-                .map(num -> num * num).forEach(System.out::println);
+                .map(num -> num * num).forEach(i -> System.out.println("Square Of Even No :" + i));
 
         System.out.println("6. Print the course name and length of the string");
         courses.stream().map(i -> i + ":" + i.length()).forEach(System.out::println);
