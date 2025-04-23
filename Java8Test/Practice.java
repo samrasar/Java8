@@ -1,9 +1,7 @@
 package Java8Test;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Practice {
@@ -28,5 +26,20 @@ public class Practice {
         if (mx.isPresent()) {
             System.out.println(mx.get());
         }
+
+
+        String a ="aabbsdss";
+       Map<Character,Long> ah= a.chars().mapToObj(c->(char)c).
+                collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+
+       String ss="this is the new key and this can be the new ui";
+        Map<String,Long> jj= Arrays.stream(ss.split(" ")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        System.out.println(jj);
+
+        Map<Character,Long>dd= ss.chars().mapToObj(c->(char)c)
+                .filter(c->!c.toString().equals(" "))
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        System.out.println(dd);
     }
 }
